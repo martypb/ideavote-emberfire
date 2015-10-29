@@ -7,7 +7,7 @@ App = Ember.Application.create({
   }
 });
 
-var dbRoot = "https://emberfire-ideavote.firebaseio.com"
+var dbRoot = "https://resplendent-fire-7520.firebaseio.com/"
 var dbRef = new Firebase(dbRoot);
 
 var ideasPath = dbRoot + "/ideas";
