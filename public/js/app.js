@@ -1,4 +1,7 @@
 // TODOS:
+var dbRoot = "https://resplendent-fire-7520.firebaseio.com/"
+var dbRef = new Firebase(dbRoot);
+
 App = Ember.Application.create({
   ready: function() {
     this.register('main:auth', App.AuthController);
@@ -6,9 +9,6 @@ App = Ember.Application.create({
     this.inject('controller', 'auth', 'main:auth');
   }
 });
-
-var dbRoot = "https://resplendent-fire-7520.firebaseio.com/"
-var dbRef = new Firebase(dbRoot);
 
 var ideasPath = dbRoot + "/ideas";
 var usersPath = dbRoot + "/users";
