@@ -135,11 +135,11 @@ App.AuthController = Ember.Controller.extend({
   },
 
   login: function() {
-    //this.authClient.login('github');
+    this.authClient.login('github');
   },
 
   logout: function() {
-    //this.authClient.logout();
+    this.authClient.logout();
   }
 
 });
