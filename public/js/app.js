@@ -107,10 +107,10 @@ App.AuthController = Ember.Controller.extend({
   currentUser: null,
 
   init: function() {
-    this.authClient = new FirebaseSimpleLogin(dbRef, function(error, githubUser) {
+      dbRef.authWithOAuthPopup("github", function(error, githubUser) {
       if (error) {
         alert('Authentication failed: ' + error);
-      } else if (githubUser) {
+      } else {
         this.set('authed', true);
         var userRef = new Firebase(usersPath + '/' + githubUser.username);
         var controller = this;
