@@ -130,8 +130,6 @@ App.AuthController = Ember.Controller.extend({
           user.setProperties(properties);
           controller.set('currentUser', user);
         });
-      } else {
-        this.set('authed', false);
       }
     }.bind(this));
   },
